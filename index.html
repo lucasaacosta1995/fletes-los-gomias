@@ -1,0 +1,953 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#CF0000" />
+
+  <!-- SEO -->
+  <title>Fletes y Mudanzas en CABA y GBA | Los Gomías | Repartos 24hs</title>
+  <meta name="description" content="Fletes, repartos, mudanzas y transporte de mascotas en CABA y Gran Buenos Aires. Atención 24hs. Cotizá por WhatsApp en 1 minuto: origen, destino, fecha y carga." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://www.fleteslosgomias.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:title" content="Fletes y Mudanzas en CABA y GBA | Los Gomías" />
+  <meta property="og:description" content="Fletes, repartos, mudanzas y transporte de mascotas. Atención 24hs. Cotizá por WhatsApp." />
+  <meta property="og:url" content="https://www.fleteslosgomias.com/" />
+  <!-- Si tenés una imagen real, ponela acá -->
+  <meta property="og:image" content="https://www.fleteslosgomias.com/assets/og.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fletes y Mudanzas en CABA y GBA | Los Gomías" />
+  <meta name="twitter:description" content="Cotizá por WhatsApp: origen, destino, fecha y carga. Atención 24hs." />
+
+  <!-- Preload (opcional si tenés logo real) -->
+  <!-- <link rel="preload" href="assets/logo.svg" as="image" /> -->
+
+  <style>
+    :root{
+      --red:#CF0000;
+      --black:#181A1C;
+      --white:#FEFEFE;
+      --muted:#8A8F98;
+      --border: rgba(24,26,28,.12);
+      --shadow: 0 10px 30px rgba(0,0,0,.12);
+      --radius: 16px;
+      --max: 1120px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      color:var(--black);
+      background:var(--white);
+      line-height:1.45;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* Layout */
+    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
+    .section{padding:56px 0}
+    .section--tight{padding:36px 0}
+    .grid{display:grid; gap:18px}
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:50;
+      background:rgba(24,26,28,.92);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:14px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px; min-width: 220px;
+      color:var(--white);
+    }
+    .brand__mark{
+      width:40px; height:40px; border-radius:10px;
+      background: linear-gradient(135deg, var(--red), #ff3b3b);
+      display:grid; place-items:center;
+      box-shadow: 0 10px 22px rgba(207,0,0,.28);
+      flex: 0 0 auto;
+    }
+    .brand__text{display:flex; flex-direction:column; line-height:1.1}
+    .brand__name{font-weight:800; letter-spacing:.4px}
+    .brand__tag{font-size:12px; color:rgba(254,254,254,.78)}
+    nav ul{
+      display:flex; gap:18px; list-style:none; padding:0; margin:0;
+      align-items:center;
+    }
+    nav a{
+      color:rgba(254,254,254,.86);
+      font-size:13px; font-weight:700; letter-spacing:.6px;
+      text-transform:uppercase;
+      padding:10px 10px;
+      border-radius:12px;
+    }
+    nav a:hover{background:rgba(254,254,254,.08); color:var(--white)}
+    .nav__cta{
+      display:flex; gap:10px; align-items:center;
+    }
+
+    /* Buttons */
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      border:1px solid transparent;
+      border-radius:14px;
+      padding:12px 14px;
+      font-weight:800;
+      letter-spacing:.2px;
+      cursor:pointer;
+      user-select:none;
+      transition: transform .08s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+      white-space:nowrap;
+    }
+    .btn:active{transform:translateY(1px)}
+    .btn--primary{
+      background:var(--red); color:var(--white);
+      box-shadow: 0 12px 28px rgba(207,0,0,.24);
+    }
+    .btn--primary:hover{box-shadow: 0 14px 34px rgba(207,0,0,.32)}
+    .btn--ghost{
+      background:transparent; color:var(--white);
+      border-color: rgba(254,254,254,.18);
+    }
+    .btn--ghost:hover{background:rgba(254,254,254,.08)}
+    .btn--dark{
+      background:var(--black); color:var(--white);
+      box-shadow: 0 12px 26px rgba(0,0,0,.18);
+    }
+    .btn--outline{
+      background:transparent; color:var(--black);
+      border-color: var(--border);
+    }
+    .btn--outline:hover{border-color: rgba(24,26,28,.28)}
+
+    /* Hero */
+    .hero{
+      position:relative;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(255,59,59,.18), transparent 55%),
+                  radial-gradient(900px 500px at 80% 40%, rgba(207,0,0,.20), transparent 55%),
+                  linear-gradient(180deg, #0f1011, var(--black));
+      color:var(--white);
+      overflow:hidden;
+    }
+    .hero::after{
+      content:"";
+      position:absolute; inset:-60px -60px auto -60px;
+      height:320px;
+      background: linear-gradient(90deg, rgba(207,0,0,.26), rgba(207,0,0,.06), transparent);
+      transform: rotate(-6deg);
+      pointer-events:none;
+    }
+    .hero__wrap{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:28px;
+      align-items:center;
+      padding:56px 0;
+      position:relative;
+      z-index:1;
+    }
+    .hero h1{
+      margin:0 0 10px;
+      font-size: clamp(28px, 3.4vw, 48px);
+      line-height:1.05;
+      letter-spacing:-.6px;
+    }
+    .hero p{
+      margin:0 0 18px;
+      color: rgba(254,254,254,.84);
+      max-width: 56ch;
+      font-size: 16px;
+    }
+    .hero__badges{display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 0}
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:9px 12px;
+      border-radius:999px;
+      background: rgba(254,254,254,.10);
+      border:1px solid rgba(254,254,254,.14);
+      font-weight:700;
+      font-size: 13px;
+      color: rgba(254,254,254,.9);
+    }
+    .hero__panel{
+      background: rgba(254,254,254,.06);
+      border: 1px solid rgba(254,254,254,.14);
+      border-radius: var(--radius);
+      padding:18px;
+      box-shadow: 0 18px 42px rgba(0,0,0,.30);
+    }
+    .hero__panel h2{
+      font-size:16px; margin:0 0 10px;
+      letter-spacing:.2px;
+    }
+    .hero__panel .mini{
+      font-size: 13px; color: rgba(254,254,254,.76);
+      margin: 0 0 12px;
+    }
+    .hero__panel .btn{width:100%; margin-top:10px}
+    .hero__meta{
+      display:flex; gap:12px; flex-wrap:wrap; align-items:center;
+      margin-top: 14px;
+      color: rgba(254,254,254,.80);
+      font-weight:700;
+      font-size: 13px;
+    }
+    .hero__meta a{color:var(--white); text-decoration: underline; text-underline-offset: 3px}
+
+    /* Sections headings */
+    .kicker{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      font-weight:900;
+      letter-spacing:.8px;
+      text-transform:uppercase;
+      color:var(--red);
+      font-size: 12px;
+      margin-bottom:10px;
+    }
+    .h2{
+      font-size: clamp(22px, 2.2vw, 32px);
+      margin:0 0 10px;
+      letter-spacing:-.4px;
+    }
+    .sub{
+      margin:0;
+      color: var(--muted);
+      max-width: 70ch;
+    }
+
+    /* Service cards */
+    .cards{
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 22px;
+    }
+    .card{
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      padding:16px;
+      background: var(--white);
+      box-shadow: 0 12px 26px rgba(0,0,0,.06);
+      display:flex;
+      flex-direction:column;
+      min-height: 230px;
+    }
+    .card__top{display:flex; align-items:flex-start; justify-content:space-between; gap:12px}
+    .icon{
+      width:42px; height:42px; border-radius:12px;
+      background: rgba(207,0,0,.10);
+      border:1px solid rgba(207,0,0,.18);
+      display:grid; place-items:center;
+      color: var(--red);
+      font-weight:900;
+    }
+    .card h3{
+      margin:10px 0 6px;
+      font-size:16px;
+      letter-spacing:-.2px;
+    }
+    .card p{
+      margin:0 0 12px;
+      color:var(--muted);
+      font-size: 13px;
+    }
+    .card__actions{
+      margin-top:auto;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .card__actions .btn{padding:10px 12px; border-radius:12px; font-weight:900}
+
+    /* Quote form */
+    .panel{
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .panel__head{
+      background: linear-gradient(180deg, rgba(207,0,0,.09), transparent);
+      border-bottom:1px solid var(--border);
+      padding:18px;
+    }
+    .panel__head strong{display:block}
+    .panel__body{padding:18px}
+    .form{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      margin-top: 14px;
+    }
+    .field{display:flex; flex-direction:column; gap:8px}
+    label{
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.7px;
+      text-transform:uppercase;
+      color: rgba(24,26,28,.74);
+    }
+    input, textarea{
+      border:1px solid rgba(24,26,28,.18);
+      border-radius: 12px;
+      padding: 12px 12px;
+      font-size: 15px;
+      outline:none;
+      background:#fff;
+    }
+    input:focus, textarea:focus{
+      border-color: rgba(207,0,0,.55);
+      box-shadow: 0 0 0 4px rgba(207,0,0,.10);
+    }
+    textarea{min-height: 110px; resize: vertical}
+    .full{grid-column: 1 / -1}
+    .services{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top: 8px;
+    }
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius: 999px;
+      border:1px solid rgba(24,26,28,.14);
+      background:#fff;
+      cursor:pointer;
+      user-select:none;
+      font-weight:800;
+      color: rgba(24,26,28,.80);
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    .chip input{width:16px;height:16px}
+    .chip:has(input:checked){
+      border-color: rgba(207,0,0,.5);
+      box-shadow: 0 0 0 4px rgba(207,0,0,.08);
+      color: var(--black);
+    }
+
+    /* Coverage */
+    .coverage{
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 18px;
+    }
+    .coverage .card{min-height:auto}
+    .coverage .card h3{margin-top:0}
+    .pill{
+      display:inline-flex;
+      padding:8px 10px;
+      border-radius: 999px;
+      background: rgba(24,26,28,.06);
+      border:1px solid rgba(24,26,28,.10);
+      font-weight:900;
+      font-size:12px;
+      letter-spacing:.5px;
+      text-transform: uppercase;
+      color: rgba(24,26,28,.76);
+      margin-bottom:10px;
+    }
+
+    /* FAQ */
+    details{
+      border:1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 14px;
+      background:#fff;
+      box-shadow: 0 10px 24px rgba(0,0,0,.05);
+    }
+    details + details{margin-top: 10px}
+    summary{
+      cursor:pointer;
+      font-weight:900;
+      list-style:none;
+    }
+    summary::-webkit-details-marker{display:none}
+    details p{margin:10px 0 0; color:var(--muted)}
+
+    /* Footer */
+    footer{
+      background: var(--black);
+      color: rgba(254,254,254,.85);
+      padding: 32px 0;
+      margin-top: 30px;
+    }
+    footer .grid{grid-template-columns: 1.2fr .8fr; align-items:start}
+    footer a{color: var(--white); text-decoration: underline; text-underline-offset: 3px}
+    .fine{color: rgba(254,254,254,.62); font-size: 13px}
+
+    /* Floating WA */
+    .fab{
+      position:fixed; right:16px; bottom:16px;
+      z-index: 60;
+      border-radius: 999px;
+      padding: 12px 14px;
+      background: var(--red);
+      color: var(--white);
+      font-weight: 900;
+      box-shadow: 0 16px 34px rgba(207,0,0,.28);
+      border:1px solid rgba(255,255,255,.18);
+    }
+    .fab:hover{filter: brightness(1.05)}
+    .fab small{display:block; font-weight:700; opacity:.9; font-size: 12px}
+
+    /* Mobile */
+    .burger{display:none}
+    @media (max-width: 980px){
+      .hero__wrap{grid-template-columns: 1fr; padding: 44px 0}
+      .cards{grid-template-columns: repeat(2, 1fr)}
+      .coverage{grid-template-columns: 1fr}
+      footer .grid{grid-template-columns: 1fr}
+    }
+    @media (max-width: 720px){
+      nav ul{display:none}
+      .burger{display:inline-flex}
+      .form{grid-template-columns: 1fr}
+      .cards{grid-template-columns: 1fr}
+      .brand{min-width:auto}
+    }
+
+    /* Simple mobile nav */
+    .mobileNav{
+      display:none;
+      border-top: 1px solid rgba(255,255,255,.10);
+      padding: 10px 0 14px;
+    }
+    .mobileNav a{
+      display:block;
+      padding: 12px 10px;
+      border-radius: 12px;
+      color: rgba(254,254,254,.90);
+      font-weight: 900;
+      letter-spacing:.6px;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+    .mobileNav a:hover{background:rgba(254,254,254,.08)}
+    .mobileNav.is-open{display:block}
+  </style>
+
+  <!-- Schema.org (LocalBusiness / MovingCompany) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MovingCompany",
+    "name": "Los Gomías - Fletes y Mudanzas",
+    "url": "https://www.fleteslosgomias.com/",
+    "telephone": "+54 9 11 5584 7429",
+    "areaServed": ["CABA", "GBA", "Gran Buenos Aires", "Provincia de Buenos Aires"],
+    "openingHours": "Mo-Su 00:00-23:59",
+    "sameAs": ["https://wa.me/5491155847429"],
+    "description": "Fletes, repartos, mudanzas y transporte de mascotas en CABA y GBA. Atención 24hs.",
+    "serviceType": ["Fletes", "Repartos", "Mudanzas", "Transporte de Mascotas"]
+  }
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="nav" aria-label="Barra de navegación">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">
+          <span class="brand__mark" aria-hidden="true">🚚</span>
+          <span class="brand__text">
+            <span class="brand__name">LOS GOMÍAS</span>
+            <span class="brand__tag">Fletes • Repartos • Mudanzas</span>
+          </span>
+        </a>
+
+        <nav aria-label="Menú principal">
+          <ul>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#precios">Precios</a></li>
+            <li><a href="#cobertura">Cobertura</a></li>
+            <li><a href="#cotizar">Cotizar</a></li>
+            <li><a href="#contacto">Contactar</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav__cta">
+          <a class="btn btn--ghost burger" href="#menu" id="burgerBtn" aria-label="Abrir menú">☰</a>
+          <a class="btn btn--ghost" id="callTop" href="#">Llamar</a>
+          <a class="btn btn--primary" id="waTop" href="#" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="mobileNav" id="mobileNav" aria-label="Menú móvil">
+        <a href="#servicios">Servicios</a>
+        <a href="#precios">Precios</a>
+        <a href="#cobertura">Cobertura</a>
+        <a href="#cotizar">Cotizar</a>
+        <a href="#contacto">Contactar</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio" class="hero" role="main">
+    <div class="container">
+      <div class="hero__wrap">
+        <div>
+          <span class="kicker">Fletes y Mudanzas • CABA & GBA</span>
+          <h1>Fletes, Repartos, Mudanzas y Transporte de Mascotas <span style="color:var(--red)">24hs</span></h1>
+          <p>
+            Coordiná rápido por WhatsApp: contanos <strong>desde</strong>, <strong>hasta</strong>, <strong>fecha</strong> y <strong>carga</strong>.
+            Te respondemos con una estimación y disponibilidad.
+          </p>
+
+          <div class="hero__meta" id="heroMeta">
+            <span>📍 CABA / Gran Buenos Aires / Interior</span>
+            <span>•</span>
+            <span>🕒 Atención 24hs</span>
+            <span>•</span>
+            <span>💳 Efectivo / Mercado Pago / Transferencia</span>
+          </div>
+
+          <div class="hero__badges">
+            <span class="badge">✅ Seriedad y responsabilidad</span>
+            <span class="badge">✅ Coordinación por WhatsApp</span>
+            <span class="badge">✅ Servicios para empresas</span>
+          </div>
+        </div>
+
+        <aside class="hero__panel" aria-label="Acciones rápidas">
+          <h2>Consulta rápida</h2>
+          <p class="mini">Tocá un botón y te armamos el mensaje con los datos básicos.</p>
+
+          <a class="btn btn--primary" href="#cotizar">Cotizar por WhatsApp (combo)</a>
+          <a class="btn btn--dark" id="waHero" href="#" rel="noopener">WhatsApp directo</a>
+          <a class="btn btn--outline" id="callHero" href="#">Llamar ahora</a>
+
+          <div class="hero__meta">
+            <span><strong id="telText">Tel:</strong> <a id="telLink" href="#">(configurar)</a></span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <section id="servicios" class="section">
+    <div class="container">
+      <span class="kicker">Servicios</span>
+      <h2 class="h2">Elegí el servicio y enviá el pedido por WhatsApp</h2>
+      <p class="sub">Cada servicio tiene su botón de WhatsApp para pedir exactamente lo que necesitás. Si querés combinar varios, usá el cotizador de abajo.</p>
+
+      <div class="grid cards" role="list">
+        <article class="card" role="listitem">
+          <div class="card__top">
+            <div class="icon" aria-hidden="true">F</div>
+          </div>
+          <h3>Fletes</h3>
+          <p>Traslados puntuales en CABA y GBA. Ideal para muebles, compras grandes y cargas medianas.</p>
+          <div class="card__actions">
+            <a class="btn btn--primary wa-service" data-service="Fletes" href="#" rel="noopener">WhatsApp Fletes</a>
+            <a class="btn btn--outline" href="#cotizar">Armar combo</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem">
+          <div class="card__top">
+            <div class="icon" aria-hidden="true">R</div>
+          </div>
+          <h3>Repartos</h3>
+          <p>Entregas y logística de repartos (particulares y empresas). Coordinación simple y rápida.</p>
+          <div class="card__actions">
+            <a class="btn btn--primary wa-service" data-service="Repartos" href="#" rel="noopener">WhatsApp Repartos</a>
+            <a class="btn btn--outline" href="#cotizar">Armar combo</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem">
+          <div class="card__top">
+            <div class="icon" aria-hidden="true">M</div>
+          </div>
+          <h3>Mudanzas</h3>
+          <p>Mudanzas completas o parciales. Te recomendamos describir carga: heladera, cama, placard, etc.</p>
+          <div class="card__actions">
+            <a class="btn btn--primary wa-service" data-service="Mudanzas" href="#" rel="noopener">WhatsApp Mudanza</a>
+            <a class="btn btn--outline" href="#cotizar">Armar combo</a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem">
+          <div class="card__top">
+            <div class="icon" aria-hidden="true">🐾</div>
+          </div>
+          <h3>Transporte de Mascotas</h3>
+          <p>Traslado cuidadoso y coordinado. Indicá tamaño, jaula/transportadora y horarios.</p>
+          <div class="card__actions">
+            <a class="btn btn--primary wa-service" data-service="Transporte de Mascotas" href="#" rel="noopener">WhatsApp Mascotas</a>
+            <a class="btn btn--outline" href="#cotizar">Armar combo</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="cotizar" class="section section--tight" aria-label="Cotizador por WhatsApp">
+    <div class="container">
+      <div class="panel">
+        <div class="panel__head">
+          <span class="kicker">Cotizar por WhatsApp</span>
+          <strong style="font-size:18px">Armá tu pedido (uno o varios servicios) y enviá el mensaje listo</strong>
+          <p class="sub" style="margin-top:6px">
+            Completá los campos. Al final se abre WhatsApp con el texto armado.
+          </p>
+        </div>
+
+        <div class="panel__body">
+          <div class="field full">
+            <label>Servicios (podés elegir varios)</label>
+            <div class="services" role="group" aria-label="Seleccionar servicios">
+              <label class="chip"><input type="checkbox" name="svc" value="Fletes">Fletes</label>
+              <label class="chip"><input type="checkbox" name="svc" value="Repartos">Repartos</label>
+              <label class="chip"><input type="checkbox" name="svc" value="Mudanzas">Mudanzas</label>
+              <label class="chip"><input type="checkbox" name="svc" value="Transporte de Mascotas">Transporte de Mascotas</label>
+            </div>
+          </div>
+
+          <form class="form" id="quoteForm">
+            <div class="field">
+              <label for="from">Desde (zona / dirección)</label>
+              <input id="from" name="from" type="text" autocomplete="street-address" placeholder="Ej: Caballito, CABA / Av. Rivadavia 1234" />
+            </div>
+
+            <div class="field">
+              <label for="to">Hasta (zona / dirección)</label>
+              <input id="to" name="to" type="text" autocomplete="street-address" placeholder="Ej: Ramos Mejía, GBA / Belgrano 555" />
+            </div>
+
+            <div class="field">
+              <label for="date">Fecha estimada</label>
+              <input id="date" name="date" type="date" />
+            </div>
+
+            <div class="field">
+              <label for="time">Horario (opcional)</label>
+              <input id="time" name="time" type="text" placeholder="Ej: 9 a 12 / después de las 18" />
+            </div>
+
+            <div class="field full">
+              <label for="items">Descripción de carga (detalle lo más posible)</label>
+              <textarea id="items" name="items" placeholder="Ej: 1 heladera, 1 cama 2 plazas, 1 placard desarmado, 1 mesa, 6 cajas, 1 TV 55&quot;..."></textarea>
+            </div>
+
+            <div class="field full">
+              <label for="notes">Notas / piso / ascensor / restricciones (opcional)</label>
+              <textarea id="notes" name="notes" placeholder="Ej: 3er piso sin ascensor / estacionamiento difícil / hay que esperar portería..."></textarea>
+            </div>
+
+            <div class="field full" style="display:flex; gap:10px; flex-wrap:wrap">
+              <button class="btn btn--primary" type="button" id="sendQuote">Enviar por WhatsApp</button>
+              <button class="btn btn--outline" type="reset">Limpiar</button>
+              <a class="btn btn--dark" href="#contacto">Ver contacto</a>
+            </div>
+
+            <p class="fine full" style="margin:0">
+              Consejo: mientras más detalle (carga, pisos, ascensor, horarios), más rápido te respondemos.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="precios" class="section">
+    <div class="container">
+      <span class="kicker">Precios</span>
+      <h2 class="h2">Consultá precios por zona (rápido)</h2>
+      <p class="sub">Los precios dependen de distancia, carga y accesos. Enviá WhatsApp y coordinamos.</p>
+
+      <div class="grid coverage">
+        <div class="card">
+          <span class="pill">CABA</span>
+          <h3>Fletes y mudanzas en Capital</h3>
+          <p>Ideal si te movés dentro de CABA. Pasanos origen/destino y carga.</p>
+          <div class="card__actions">
+            <a class="btn btn--primary wa-zone" data-zone="CABA" href="#" rel="noopener">WhatsApp CABA</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="pill">GBA</span>
+          <h3>Gran Buenos Aires (AMBA)</h3>
+          <p>Traslados a zona oeste, sur, norte. Coordinación y horarios.</p>
+          <div class="card__actions">
+            <a class="btn btn--primary wa-zone" data-zone="GBA" href="#" rel="noopener">WhatsApp GBA</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="pill">Interior</span>
+          <h3>Interior del país</h3>
+          <p>Consultanos disponibilidad y fechas. Enviá detalle de carga.</p>
+          <div class="card__actions">
+            <a class="btn btn--primary wa-zone" data-zone="Interior del país" href="#" rel="noopener">WhatsApp Interior</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cobertura" class="section section--tight">
+    <div class="container">
+      <span class="kicker">Cobertura</span>
+      <h2 class="h2">CABA • GBA • Interior</h2>
+      <p class="sub">Trabajamos con coordinación por WhatsApp y atención 24hs. Servicios para particulares y empresas.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-label="Preguntas frecuentes">
+    <div class="container">
+      <span class="kicker">FAQ</span>
+      <h2 class="h2">Preguntas frecuentes</h2>
+      <p class="sub">Respuestas rápidas para acelerar la coordinación.</p>
+
+      <div style="margin-top:18px">
+        <details>
+          <summary>¿Qué necesito enviar para cotizar más rápido?</summary>
+          <p>Origen, destino, fecha estimada, y descripción de la carga (heladera, cama, placard, cajas, etc.). Sumá pisos y si hay ascensor.</p>
+        </details>
+        <details>
+          <summary>¿Trabajan 24hs?</summary>
+          <p>Sí. Coordinamos por WhatsApp según disponibilidad y horarios de carga/descarga.</p>
+        </details>
+        <details>
+          <summary>¿Qué medios de pago aceptan?</summary>
+          <p>Efectivo, Mercado Pago y transferencia. Podés consultarlo en el mensaje.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="section section--tight" aria-label="Contacto">
+    <div class="container">
+      <div class="panel">
+        <div class="panel__body" style="display:flex; gap:16px; flex-wrap:wrap; align-items:center; justify-content:space-between">
+          <div>
+            <span class="kicker">Contactar</span>
+            <h2 class="h2" style="margin-bottom:6px">Hablemos y coordinamos</h2>
+            <p class="sub">WhatsApp es lo más rápido. Si preferís, llamanos.</p>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn btn--primary" id="waBottom" href="#" rel="noopener">WhatsApp</a>
+            <a class="btn btn--dark" id="callBottom" href="#">Llamar</a>
+          </div>
+        </div>
+      </div>
+      <p class="fine" style="margin-top:12px">© <span id="year"></span> Los Gomías. Fletes • Repartos • Mudanzas • Transporte de Mascotas.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="grid">
+        <div>
+          <strong style="font-size:16px">Los Gomías</strong>
+          <p class="fine" style="margin:10px 0 0">
+            Fletes y mudanzas en CABA y GBA. Repartos y transporte de mascotas. Atención 24hs.
+          </p>
+        </div>
+        <div>
+          <p class="fine" style="margin:0"><strong>Tel:</strong> <a id="telFooter" href="#">(configurar)</a></p>
+          <p class="fine" style="margin:8px 0 0"><strong>WhatsApp:</strong> <a id="waFooter" href="#" rel="noopener">Abrir chat</a></p>
+          <p class="fine" style="margin:8px 0 0"><strong>Zonas:</strong> CABA, Gran Buenos Aires, Interior</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a class="fab" id="waFab" href="#" rel="noopener" aria-label="Abrir WhatsApp">
+    WhatsApp
+    <small>Cotizá en 1 minuto</small>
+  </a>
+
+  <script>
+    /**
+     * CONFIGURACIÓN (sin .env / sin npm)
+     * Editá estos valores y listo.
+     */
+    const SITE = {
+      brand: "Los Gomías",
+      phoneE164: "5491155847429",              // WhatsApp wa.me (sin +, sin espacios)
+      phoneDisplay: "+54 9 11 5584 7429",       // cómo se ve en pantalla
+      baseMessage: "Hola! Quiero consultar por un servicio.",
+      serviceArea: "CABA y GBA",
+      website: "https://www.fleteslosgomias.com/"
+    };
+
+    const $ = (sel, root=document) => root.querySelector(sel);
+    const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+
+    function waUrl(text){
+      const encoded = encodeURIComponent(text.trim());
+      return `https://wa.me/${SITE.phoneE164}?text=${encoded}`;
+    }
+    function telUrl(){
+      // Para tel: conviene sin espacios
+      const digits = SITE.phoneDisplay.replace(/[^\d+]/g,'');
+      return `tel:${digits}`;
+    }
+
+    function setContactLinks(){
+      const tel = telUrl();
+      const wa = waUrl(SITE.baseMessage);
+
+      $("#telLink").href = tel;
+      $("#telLink").textContent = SITE.phoneDisplay;
+
+      $("#telText").textContent = "Tel:";
+      $("#telFooter").href = tel;
+      $("#telFooter").textContent = SITE.phoneDisplay;
+
+      $("#callTop").href = tel;
+      $("#callHero").href = tel;
+      $("#callBottom").href = tel;
+
+      $("#waTop").href = wa;
+      $("#waHero").href = wa;
+      $("#waBottom").href = wa;
+      $("#waFooter").href = wa;
+      $("#waFab").href = wa;
+    }
+
+    function buildServiceMessage(service){
+      return [
+        `Hola! Quiero consultar por: *${service}* (${SITE.brand}).`,
+        `Zona: ${SITE.serviceArea}`,
+        "",
+        "Datos para cotizar:",
+        "- Desde:",
+        "- Hasta:",
+        "- Fecha estimada:",
+        "- Carga/Detalle (ej: heladera, cama, placard, cajas):"
+      ].join("\n");
+    }
+
+    function buildZoneMessage(zone){
+      return [
+        `Hola! Quiero consultar precios para *${zone}* (${SITE.brand}).`,
+        "",
+        "Datos para cotizar:",
+        "- Servicio (fletes/repartos/mudanza/mascotas):",
+        "- Desde:",
+        "- Hasta:",
+        "- Fecha estimada:",
+        "- Carga/Detalle:"
+      ].join("\n");
+    }
+
+    function getSelectedServices(){
+      return $$('input[name="svc"]:checked').map(i => i.value);
+    }
+
+    function formatDateISOToHuman(iso){
+      if(!iso) return "";
+      // YYYY-MM-DD
+      const [y,m,d] = iso.split("-");
+      if(!y || !m || !d) return iso;
+      return `${d}/${m}/${y}`;
+    }
+
+    function buildQuoteMessage(){
+      const services = getSelectedServices();
+      const from = $("#from").value.trim();
+      const to = $("#to").value.trim();
+      const date = formatDateISOToHuman($("#date").value);
+      const time = $("#time").value.trim();
+      const items = $("#items").value.trim();
+      const notes = $("#notes").value.trim();
+
+      const svcText = services.length ? services.join(", ") : "(sin seleccionar)";
+
+      const lines = [
+        `Hola! Quiero cotizar (${SITE.brand}).`,
+        `Servicios: *${svcText}*`,
+        "",
+        `Desde: ${from || "-"}`,
+        `Hasta: ${to || "-"}`,
+        `Fecha estimada: ${date || "-"}`,
+        `Horario: ${time || "-"}`,
+        "",
+        `Carga/Detalle: ${items || "-"}`,
+      ];
+
+      if(notes) {
+        lines.push("", `Notas: ${notes}`);
+      }
+
+      lines.push("", "Gracias!");
+      return lines.join("\n");
+    }
+
+    function validateQuote(){
+      // Mínimo: 1 servicio o algo en detalle + desde/hasta
+      const services = getSelectedServices();
+      const from = $("#from").value.trim();
+      const to = $("#to").value.trim();
+      const items = $("#items").value.trim();
+
+      if(!services.length && !items){
+        alert("Seleccioná al menos un servicio o completá la descripción de la carga.");
+        return false;
+      }
+      if(!from || !to){
+        alert("Completá 'Desde' y 'Hasta' para poder cotizar mejor.");
+        return false;
+      }
+      return true;
+    }
+
+    function bindActions(){
+      // Mobile nav
+      $("#burgerBtn")?.addEventListener("click", (e)=>{
+        e.preventDefault();
+        $("#mobileNav").classList.toggle("is-open");
+      });
+
+      // Service buttons
+      $$(".wa-service").forEach(btn=>{
+        const svc = btn.dataset.service;
+        btn.href = waUrl(buildServiceMessage(svc));
+        btn.addEventListener("click", (e)=>{
+          // ya navega al link
+        });
+      });
+
+      // Zone buttons
+      $$(".wa-zone").forEach(btn=>{
+        const zone = btn.dataset.zone;
+        btn.href = waUrl(buildZoneMessage(zone));
+      });
+
+      // Quote builder
+      $("#sendQuote").addEventListener("click", ()=>{
+        if(!validateQuote()) return;
+        const msg = buildQuoteMessage();
+        window.open(waUrl(msg), "_blank", "noopener");
+      });
+
+      // Footer year
+      $("#year").textContent = new Date().getFullYear();
+    }
+
+    setContactLinks();
+    bindActions();
+  </script>
+</body>
+</html>
